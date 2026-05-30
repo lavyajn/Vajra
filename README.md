@@ -1,5 +1,3 @@
-# Vajra
-
 # वज्र · VAJRA
 ### Predictive SCADA Defense Engine & 3D Grid Simulator
 
@@ -156,7 +154,7 @@ Click `RESTORE GRID`. The C++ engine wipes its state, all nodes return to nomina
 
 ## The Team
 
-Built at **[Hackathon Name · Date]**
+Built at **[HackX 5.0 SFIT]**
 
 Lavya Jain · Aaryamaan Rai · Aditya Gorane
 
