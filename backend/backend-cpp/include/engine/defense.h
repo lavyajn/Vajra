@@ -71,3 +71,5 @@ private:
         }
     }
 };
+
+#endif // DEFENSE_H

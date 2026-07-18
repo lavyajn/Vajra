@@ -4,7 +4,7 @@ import { OrbitControls } from '@react-three/drei';
 import useGridStore from '../../store/useGridStore';
 import GridTower from './GridTower';
 import TransmissionLine from './TransmissionLine';
-import GroundPlane from './GroundPlane';
+import CityEnvironment from './CityEnvironment';
 import Skybox from './Skybox';
 
 export default function SceneCanvas() {
@@ -15,7 +15,7 @@ export default function SceneCanvas() {
 
   return (
     <Canvas
-      camera={{ position: [0, 18, 24], fov: 50 }}
+      camera={{ position: [0, 40, 10], fov: 45 }}
       style={{ width: '100%', height: '100%' }}
       gl={{ antialias: true, alpha: false }}
       onCreated={({ gl }) => {
@@ -40,18 +40,19 @@ export default function SceneCanvas() {
       />
 
       <Skybox />
-      {/* Environment */}
-      <GroundPlane />
+      
+      {/* City Environment replacing the Ground Plane */}
+      <CityEnvironment />
 
       {/* Controls — locked vertical tilt within comfortable range */}
       <OrbitControls
-        minPolarAngle={Math.PI / 6}
-        maxPolarAngle={Math.PI / 2.5}
+        minPolarAngle={Math.PI / 8}
+        maxPolarAngle={Math.PI / 2.2}
         enablePan
         enableZoom
         enableRotate
-        minDistance={8}
-        maxDistance={40}
+        minDistance={10}
+        maxDistance={80}
         zoomSpeed={0.8}
         target={[0, 0, 0]}
       />
